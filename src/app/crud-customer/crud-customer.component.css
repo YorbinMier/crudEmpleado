@@ -1,0 +1,71 @@
+.header-container {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Ajusta el espacio entre el contenido y el borde del contenedor */
+}
+
+.image-container {
+    width: 100px; /* Ancho deseado para la imagen */
+}
+
+/* Estilo para los botones, por ejemplo: */
+.buttons-container button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+.buttons-container button {
+    background-color: orange;
+    color: white;
+    border: none;
+    margin-right: 10px; /* Espacio entre los botones */
+    padding: 8px 16px; /* Ajusta el espaciado interno del botón */
+    border-radius: 4px; /* Agrega esquinas redondeadas a los botones */
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el label de búsqueda */
+.search-container label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333; /* Color del texto del label */
+    font-size: 18px;
+}
+
+/* Estilos para el input de búsqueda */
+.search-container input {
+    padding: 8px;
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+
+/* Estilos para el botón de búsqueda */
+.search-container button {
+    background-color: #ff8000; /* Color de fondo anaranjado */
+    color: #fff; /* Color de texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de búsqueda cuando se coloca el cursor encima (hover) */
+.search-container button:hover {
+    background-color: #ffaa00; /* Cambio de color al pasar el cursor */
+}
+

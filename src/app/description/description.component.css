@@ -1,0 +1,102 @@
+/* Estilos para la cabecera */
+.header {
+    background-color: #333; /* Color de fondo de la cabecera */
+    color: #fff; /* Color del texto en la cabecera */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo img {
+    max-width: 180px; /* Ajusta el tamaño del logo a 100px */
+}
+  
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  .buttons button {
+    background-color: #ff6600; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .buttons button:hover {
+    background-color: #e54c00; /* Cambio de color al pasar el mouse sobre los botones */
+  }
+  
+  /* Estilos para la sección "Bienvenido a Toyota" */
+  .welcome-section {
+    background-color: #ffffff; /* Fondo blanco */
+  padding: 20px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: shine 1s alternate infinite;
+  }
+  
+  .welcome-section h2 {
+    font-size: 36px; /* Tamaño del título "Bienvenido a Toyota" */
+    color: #0c0c0c; /* Color del título */
+    margin-left: 80px;
+    font-family: 'Impact', sans-serif; 
+    animation: shine 2s infinite;
+
+  }
+  
+  .welcome-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .welcome-content img {
+    max-width: 500px; /* Tamaño máximo de la imagen */
+    margin-right: 90px;
+  }
+  
+  @keyframes shine {
+    0%, 100% {
+      text-shadow: 0 0 5px #ffA500, 0 0 10px #ffA500, 0 0 15px #ffA500;
+    }
+    50% {
+      text-shadow: none;
+    }
+  }
+  /* Otros estilos para el contenido de la descripción y contacto, según lo necesites */
+/* Estilos para la sección "Descripción" */
+.description {
+  background-color: #f9f9f9; /* Fondo gris claro para descripción */
+  padding: 20px;
+  color: #333;
+  border: 1px solid #ccc; /* Borde para el contenedor */
+  border-radius: 5px; /* Bordes redondeados */
+  /* Agrega otros estilos según tus necesidades */
+}
+
+/* Estilos para la sección "Contacto" */
+.contact {
+  background-color: #f9f9f9; /* Fondo gris claro para contacto */
+  padding: 20px;
+  color: #333;
+  border: 1px solid #ccc; /* Borde para el contenedor */
+  border-radius: 5px; /* Bordes redondeados */
+  /* Agrega otros estilos según tus necesidades */
+}
+.description h2,
+.contact h2 {
+  font-weight: bold; /* Establece el título (h2) en negrita */
+  text-align: center; /* Centra el título (h2) */
+}
+
+.description p,
+.contact p {
+  font-size: 1.3em; /* Aumenta el tamaño del párrafo */
+  font-family: "Georgia", serif; /* Cambia la fuente de letra a una fuente genérica */
+}
+
+  

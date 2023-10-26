@@ -1,0 +1,72 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% del alto de la ventana */
+  }
+  
+  .login-container {
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-container img {
+    width: 150px; /* Aumenta el tamaño del logo aquí */
+    height: auto;
+  }
+  
+  /* Estilos para los labels */
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilos para los inputs */
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para el botón */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9100; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Estilos para el mensaje de error */
+  .error-message {
+    color: #d9534f; /* Color de texto de error */
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Resto de tus estilos aquí */
+  body {
+    background-color: #6e6e6e; /* Cambia el color de fondo a tu elección */
+  }

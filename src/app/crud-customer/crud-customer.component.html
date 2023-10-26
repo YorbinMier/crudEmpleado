@@ -1,0 +1,63 @@
+<div class="main-container">
+    <div class="header-container">
+        <div class="image-container">
+            <!-- Coloca aquí tu imagen -->
+            <img src="./assets/Imagenes/toyota.png" alt="Logo de la empresa" width="80px">
+        </div>
+        <div class="buttons-container">
+            <button (click)="navigateTo('/description')">Inicio</button>
+            <button type="button" class="btn btn-sm btn-success" (click)="openDialog=true">Agregar Empleado</button>
+        </div>
+    </div>
+    <div class="search-container">
+        <label for="searchInput">Buscar empleado:</label>
+        <input type="text" id="searchInput" [(ngModel)]="searchTerm">
+        <button (click)="search()">Buscar</button>
+    </div>
+    <div class="table-container">
+        <ng-container *ngIf="(customerList$ | async) as list">
+            <!-- Utiliza un 'ngIf' junto con el operador 'async' para suscribirse al observable 'customerList$' y asignar los resultados a 'list' -->
+            <div class="table-responsive" *ngIf="list.length;else emptyTable">
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>FechaNacimiento</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th>CuentaBanco</th>
+                            <th>Operacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cuerpo de la tabla -->
+                        <tr *ngFor="let customer of list;let index=index">
+                             <!-- Itera sobre la lista de clientes y muestra sus datos en filas -->
+                            <td>{{customer.id}}</td>
+                            <td>{{customer.Nombre}}</td>
+                            <td>{{customer.Apellido}}</td>
+                            <td>{{customer.FechaNacimiento}}</td>
+                            <td>{{customer.Telefono}}</td>
+                            <td>{{customer.Email}}</td>
+                            <td>{{customer.CuentaBanco}}</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-danger mx-1" (click)="deleteItem(customer)">Eliminar</button>
+                                <button type="button" class="btn btn-sm btn-secondary mx-1" (click)="editItem(customer)">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </ng-container>
+        <ng-template #emptyTable>
+            <!-- Plantilla que se muestra si la lista de clientes está vacía -->
+            <div class="empty-message">
+                <h4>Visualización de los registros</h4>
+            </div>
+        </ng-template>
+    </div>
+</div>
+<app-customer-dialog *ngIf="openDialog" (dialogClosed)="openDialog=false" [customer]="customer"></app-customer-dialog>
+<!-- Componente 'app-customer-dialog' que se muestra si 'openDialog' es verdadero, con el cliente 'customer' -->

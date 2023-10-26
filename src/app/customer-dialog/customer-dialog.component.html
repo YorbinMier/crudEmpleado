@@ -1,0 +1,95 @@
+<div class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog shadow">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Datos del Empleado</h5>
+          <button type="button" class="btn-close" (click)="closeDialog()"></button>
+        </div>
+        <div class="modal-body">
+        <form #form="ngForm" [formGroup]="customerForm" (ngSubmit)="submit()" autocomplete="off">
+          <!-- Formulario con Angular formGroup 'customerForm' y función 'submit' en la presentación -->
+            <div class="field-row">
+              <div class="form-field">
+                <label class="form-label">Nombre *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    appAutoFocus
+                    formControlName="Nombre"
+                    [ngClass]="{'is-invalid': customerForm.controls['Nombre'].invalid && customerForm.controls['Nombre'].touched}">
+                    <!-- Campo de entrada para 'Nombre' con validación de clase CSS 'is-invalid' -->
+                    <small class="invalid-feedback">
+                  El campo es obligatorio y tiene un máximo de 32 caracteres.
+                </small>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Apellido *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    formControlName="Apellido"
+                    [ngClass]="{'is-invalid': customerForm.controls['Apellido'].invalid && customerForm.controls['Apellido'].touched}">
+                <small class="invalid-feedback">
+                  El campo es obligatorio y tiene un máximo de 32 caracteres.
+                </small>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="form-field">
+                <label class="form-label">Fecha Nacimiento *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    formControlName="FechaNacimiento"
+                    [ngClass]="{'is-invalid': customerForm.controls['FechaNacimiento'].invalid && customerForm.controls['FechaNacimiento'].touched}">
+                <small class="invalid-feedback">
+                  El formato de la fecha es xxxx/xx/xx
+                </small>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Telefono *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    formControlName="Telefono"
+                    [ngClass]="{'is-invalid': customerForm.controls['Telefono'].invalid && customerForm.controls['Telefono'].touched}">
+                <small class="invalid-feedback">
+                  Formato del numero +591
+                </small>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="form-field">
+                <label class="form-label">Email *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    formControlName="Email"
+                    [ngClass]="{'is-invalid': customerForm.controls['Email'].invalid && customerForm.controls['Email'].touched}">
+                <small class="invalid-feedback">
+                  El email no es valido
+                </small>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Cuenta Banco *</label>
+                <input class="form-control"
+                    type="text"
+                    autocomplete="off"
+                    formControlName="CuentaBanco"
+                    [ngClass]="{'is-invalid': customerForm.controls['CuentaBanco'].invalid && customerForm.controls['CuentaBanco'].touched}">
+                <small class="invalid-feedback">
+                  Formato del numero de tarjeta dddd-dddd-dddd-dddd
+                </small>
+              </div>
+            </div>
+        </form>     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" (click)="closeDialog()">Cancelar</button>
+          <!-- Botón para cerrar la ventana modal, llamando a la función 'closeDialog' al hacer clic -->
+          <button type="button" class="btn btn-sm btn-primary" [disabled]="customerForm.invalid || (formgropChanged$ | async)" (click)="form.ngSubmit.emit()">Guardar</button>
+          <!-- Botón para guardar los datos del empleado con validación de formulario y ejecución de la función 'submit' al hacer clic -->
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+/* Estilo para el modal */
+.custom-modal {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para el diálogo */
+.custom-dialog {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* Estilo para el contenido */
+.custom-content {
+    padding: 20px;
+}
+
+/* Estilo para el encabezado */
+.custom-header {
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Estilo para el título */
+.custom-title {
+    font-size: 24px;
+}
+
+/* Estilo para el botón de cierre */
+.custom-close {
+    color: #fff;
+}
+
+/* Estilo para los campos de entrada */
+.custom-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Estilo para las etiquetas */
+.custom-label {
+    color: #000;
+}
+
+/* Estilo para los mensajes de error */
+.custom-feedback {
+    color: #f00;
+}
+
+/* Estilo para el pie de página */
+.custom-footer {
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* Estilo para los botones */
+.custom-btn {
+    margin-right: 10px;
+}
+
+
+
